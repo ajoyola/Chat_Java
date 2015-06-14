@@ -51,11 +51,9 @@ class Chat extends JFrame
             try {
                
                send_Message("\n\n***** Materia: Redes de Computadores Par. 1 *****");
-               send_Message("\n>>> Objetivo: Elaborar chat con AES ");
-               send_Message("\n                           Integrantes: ");
-               send_Message("\n>>> Angely Oyola ");
-               send_Message(">>> Siana Puente ");
-               send_Message(">>> Joyce Sarmiento ");
+               send_Message("\n>>> Objetivo: Elaborar chat con Encriptación AES");
+               send_Message("\n   Elaborado por: ");
+               send_Message("\n>>> Ajoyola");
                sock=serv.accept();
                sock2=serv2.accept();
             } catch (IOException e)

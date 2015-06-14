@@ -9,6 +9,8 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -30,14 +32,15 @@ public class Bienvenido extends JFrame implements ActionListener {
     
     iniciar.addActionListener(this);
     JLabel lab = new JLabel();
-         ImageIcon imgThisImg = new ImageIcon("C:\\Users\\aoyola\\Documents\\NetBeansProjects\\RealEchoServer\\src\\Client\\elchat.jpg");
+        URL is = getClass().getResource("elchat.jpg");
+        ImageIcon imgThisImg = new ImageIcon(is);
         lab.setIcon(imgThisImg);
         
         JPanel panel_Izquierda=new JPanel();
         JPanel panel_but=new JPanel();
         panel_Izquierda.setLayout(new BorderLayout());
         panel_but.setLayout(new BorderLayout());
-         panel_but.add(iniciar,BorderLayout.CENTER);
+        panel_but.add(iniciar,BorderLayout.CENTER);
          
         
         panel_Izquierda.add( new JLabel( "BIENVENDIDOS AL CHAT") ,BorderLayout.NORTH);
